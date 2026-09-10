@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #10151b;
+  color: #ffffff;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.card {
+  background: #19212a;
+  border: 1px solid #303b46;
+  border-radius: 15px;
+  padding: 18px;
+  margin: 18px 0;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border-radius: 9px;
+  border: 1px solid #43505c;
+  background: #10161c;
+  color: white;
+}
+
+button {
+  padding: 12px 18px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 9px;
+  background: #3478f6;
+  color: white;
+  font-weight: bold;
+}
+
+.map {
+  height: 260px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background:
+    linear-gradient(#28343f 1px, transparent 1px),
+    linear-gradient(90deg, #28343f 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.point {
+  position: absolute;
+  font-size: 40px;
+  color: #3478f6;
+}
+
+.object {
+  padding: 15px 0;
+  border-bottom: 1px solid #303b46;
+}
+
+code {
+  background: #10161c;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
