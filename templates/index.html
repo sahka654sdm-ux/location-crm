@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Location CRM</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <h1>Location CRM</h1>
+  <p>Система учёта объектов</p>
+
+  <div class="card">
+    <h2>Добавить объект</h2>
+
+    <form method="post" action="/add">
+      <input name="name" placeholder="Название объекта" required>
+      <input name="category" placeholder="Категория">
+      <input name="coordinate_text" placeholder="Координатная метка">
+
+      <select name="status">
+        <option>Новый</option>
+        <option>Активный</option>
+        <option>Проверка</option>
+        <option>Архив</option>
+      </select>
+
+      <textarea name="notes" placeholder="Примечание"></textarea>
+
+      <button>Добавить</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Карта / схема</h2>
+
+    <div class="map">
+      <span>MAP</span>
+      <div class="point">●</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>База объектов</h2>
+
+    {% for r in rows %}
+    <div class="object">
+      <b>#{{ r.id }} — {{ r.name }}</b>
+      <p>{{ r.category }} | {{ r.status }}</p>
+      <code>{{ r.coordinate_text or "—" }}</code>
+      <p>{{ r.notes }}</p>
+
+      <form method="post" action="/delete/{{ r.id }}">
+        <button>Удалить</button>
+      </form>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>
