@@ -1,43 +1,4 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #10151b;
-  color: #ffffff;
-}
-
-.wrap {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-h1 {
-  margin-bottom: 5px;
-}
-
-.card {
-  background: #19212a;
-  border: 1px solid #303b46;
-  border-radius: 15px;
-  padding: 18px;
-  margin: 18px 0;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 13px;
-  margin: 6px 0;
-  box-sizing: border-box;
-  border-radius: 9px;
-  border: 1px solid #43505c;
-  background: #10161c;
-  color: white;
-}
-
-button {
-  padding: 12px 18px;
-  margin-top: 8px;
-  border: 0;
+border: 0;
   border-radius: 9px;
   background: #3478f6;
   color: white;
